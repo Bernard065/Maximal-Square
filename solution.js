@@ -18,7 +18,7 @@ const maximalSquare = (matrix) => {
   for (let i = 1; i <= rows; i++) {
     for (let j = 1; j <= cols; j++) {
       // Check if the current cell in the matrix is '1'
-      if (matrix[1 - 1][j - 1] === "1") {
+      if (matrix[i - 1][j - 1] === "1") {
         // Calculate the size of the largest square ending at this cell
         // Th value is the minimum of the three adjacent cell plus one
         dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1;
